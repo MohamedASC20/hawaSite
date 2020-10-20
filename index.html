@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawa Drame</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="show-on-scroll.js"></script>
+    <style>
+        body {
+          font-family: "Lato", sans-serif;
+        }
+        
+        .sidenav {
+          
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+        }
+        
+        .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+        
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+        /*slideshow*/
+        * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+        </style>
+        <!-- CSS only -->
+
+
+
+</head>
+<body>
+ 
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#"><img src="images/homeicon.png" width="50">Home</a>
+       
+        <a href="#education"><img src="images/brainIcon.png" width="50">Education</a>
+        <a href="#experience"><img src="images/factoryIcon.png" width="50">Experience</a>
+        <a href="#contact"><img src="images/phoneIcon.png" width="50">Contact Me</a>
+      </div>
+      <header><h1>Hawa Drame</h1></header>
+      
+    
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; menu</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+<div id = 'everything'>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 2</div>
+      <img src="images/slide1.png" style="width:100%">
+      <div class="text"> </div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 2</div>
+      <img src="images/slide2.png" style="width:100%">
+      <div class="text"> </div>
+    </div>
+    
+
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      
+    </div>
+    
+    <script>
+      
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      
+      setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+    </script>
+    <section id = 'education'><img src="images/slide3.png" width="75%" class="inline-photo fadeIn"></section>
+    <section id = 'experience'><img src="images/slide4.png" width="75%" class="inline-photo fadeIn"></section>
+    <section><img src="images/slide5.png" width="75%" class="inline-photo fadeIn"></section>
+    <section id ='leadership'><img src="images/slide6.png" width="75%" class="inline-photo fadeIn"></section>
+    <section id = 'skills'><img src="images/slide7.png" width="75%" class="inline-photo fadeIn"></section>
+    <sectionid id = 'contact'> 
+<h1><strong><u>Contact Me</u></strong> </h1>
+
+      <form action="https://www.formrhino.com/zwreyot"
+    accept-charset="UTF-8"
+    enctype="multipart/form-data"
+    method="POST">
+<input type="hidden" name="utf8" value="✓">
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter your name here...">
+ <br>
+<label for="email-address">Email:</label>
+<input type="email" id="email-address" name="email" placeholder="Enter your email here...">
+<br>
+<label for="message">Message:</label><br>
+<textarea id="message" name="message" placeholder="Type your message here..." style="height:200px"></textarea>
+
+<button type="submit">Submit</button>
+</form>
+
+    </section>
+
+     
+  </div>
+</body>
+</html>
